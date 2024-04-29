@@ -13,8 +13,13 @@ plt.show()
 
 
 Bar Graph
+import seaborn as sns
+import matplotlib.pyplot as plt
+iris = sns.load_dataset('iris')
 plt.figure(figsize=(10, 6))
-sns.barplot(x='species', y='petal_length', data=iris, ci=None, palette='cool')  plt.title('Average Petal Length by Species')
+sns.scatterplot(x='sepal_length', y='sepal_width', hue='species', data=iris, style='species', palette='bright')
+plt.figure(figsize=(10, 6))
+sns.barplot(x='species', y='petal_length', data=iris, ci=None, palette='cool') ; plt.title('Average Petal Length by Species')
 plt.xlabel('Species')
 plt.ylabel('Average Petal Length (cm)')
 plt.show()
