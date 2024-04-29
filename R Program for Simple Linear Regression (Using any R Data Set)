@@ -1,0 +1,11 @@
+data(mtcars)
+model <- lm(mpg ~ wt, data = mtcars)
+print(summary(model))
+plot_path <- "SimpleLinearRegressionExisting.png"
+save_regression_plot <- function(file_path) {
+  png(file_path, width = 800, height = 600)
+  plot(mtcars$wt, mtcars$mpg, main = "Simple Linear Regression", xlab = "Weight (1000 lbs)", ylab = "Miles Per Gallon", pch = 19, col = "blue", cex = 1.3, lwd = 2)
+  abline(model, col = "red", lwd = 2)
+  dev.off()
+}
+save_regression_plot(plot_path)
