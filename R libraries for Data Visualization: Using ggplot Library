@@ -1,0 +1,6 @@
+library(ggplot2)
+data <- data.frame(
+  x = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+  y = c(3, 5, 4, 6, 8, 7, 9, 10, 12, 11)
+)
+ggplot(data, aes(x, y)) + geom_point() + labs(title = "Scatter Plot", x = "X-axis", y = "Y-axis")
