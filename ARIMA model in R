@@ -1,4 +1,3 @@
-
 install.packages("forecast")
 library(forecast)
 png(file = "arimawithoutforecasting.png")
